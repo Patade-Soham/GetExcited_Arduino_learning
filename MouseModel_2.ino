@@ -10,10 +10,10 @@
 
 NewPing sonar(TRIG_PIN, ECHO_PIN, MAX_DISTANCE); 
 
-AF_DCMotor motor1(1, MOTOR12_64KHZ);  // Front Left
-AF_DCMotor motor2(2, MOTOR12_64KHZ);  // Rear Left
-AF_DCMotor motor3(3, MOTOR34_64KHZ);  // Front Right
-AF_DCMotor motor4(4, MOTOR34_64KHZ);  // Rear Right
+AF_DCMotor motor1(1, MOTOR12_64KHZ);  
+AF_DCMotor motor2(2, MOTOR12_64KHZ);  
+AF_DCMotor motor3(3, MOTOR34_64KHZ);  
+AF_DCMotor motor4(4, MOTOR34_64KHZ);  
 
 Servo myservo;
 
@@ -23,7 +23,7 @@ int speedSet = 0;
 
 void setup() {
   myservo.attach(10);
-  myservo.write(90);  // Center position
+  myservo.write(90);  
   delay(1000);
 
   distance = readPing();
@@ -71,20 +71,20 @@ int readPing() {
 }
 
 int lookRight() {
-  myservo.write(30);  // Look right
+  myservo.write(30); 
   delay(500);
   int dist = readPing();
   delay(100);
-  myservo.write(90);  // Re-center
+  myservo.write(90);  
   return dist;
 }
 
 int lookLeft() {
-  myservo.write(150);  // Look left
+  myservo.write(150);  
   delay(500);
   int dist = readPing();
   delay(100);
-  myservo.write(90);  // Re-center
+  myservo.write(90);  
   return dist;
 }
 
