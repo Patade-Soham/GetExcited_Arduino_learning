@@ -1,8 +1,7 @@
 
 
-char command; // Variable to store received command
+char command; 
 
-// Define motor control pins
 int ena = 6;
 int in1 = 12;
 int in2 = 11;
@@ -11,9 +10,8 @@ int in3 = 10;
 int in4 = 9;
 
 void setup() {
-  Serial.begin(9600); // Start Serial Communication
-
-  // Set motor pins as OUTPUT
+  Serial.begin(9600); 
+  
   pinMode(ena, OUTPUT);
   pinMode(in1, OUTPUT);
   pinMode(in2, OUTPUT);
@@ -28,16 +26,16 @@ void loop() {
     command = Serial.read();
 
     switch (command) {
-      case 'F': // Forward
+      case 'F': 
         digitalWrite(in1, HIGH);
         digitalWrite(in2, LOW);
         digitalWrite(in3, HIGH);
         digitalWrite(in4, LOW);
-        analogWrite(ena, 200); // Speed 0-255
+        analogWrite(ena, 200); 
         analogWrite(enb, 200);
         break;
 
-      case 'B': // Backward
+      case 'B': 
         digitalWrite(in1, LOW);
         digitalWrite(in2, HIGH);
         digitalWrite(in3, LOW);
@@ -46,7 +44,7 @@ void loop() {
         analogWrite(enb, 200);
         break;
 
-      case 'L': // Left Turn
+      case 'L': 
         digitalWrite(in1, LOW);
         digitalWrite(in2, HIGH);
         digitalWrite(in3, HIGH);
@@ -55,7 +53,7 @@ void loop() {
         analogWrite(enb, 200);
         break;
 
-      case 'R': // Right Turn
+      case 'R': 
         digitalWrite(in1, HIGH);
         digitalWrite(in2, LOW);
         digitalWrite(in3, LOW);
@@ -64,7 +62,7 @@ void loop() {
         analogWrite(enb, 200);
         break;
 
-      case 'S': // Stop
+      case 'S': 
         digitalWrite(in1, LOW);
         digitalWrite(in2, LOW);
         digitalWrite(in3, LOW);
