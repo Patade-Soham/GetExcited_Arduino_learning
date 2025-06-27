@@ -9,14 +9,14 @@
 
 
 #define MAX_DISTANCE 200
-#define SAFE_DISTANCE 40  // Start avoiding at 40cm
-#define MIN_DISTANCE 15   // Emergency stop distance
-#define SCAN_INTERVAL 200 // ms between scans
+#define SAFE_DISTANCE 40  
+#define MIN_DISTANCE 15   
+#define SCAN_INTERVAL 200 
 
 
-#define MOTOR_SPEED 180   // Base speed (0-255)
-#define TURN_DURATION 600 // ms for 90° turn
-#define REVERSE_DURATION 500 // ms for backing up
+#define MOTOR_SPEED 180   
+#define TURN_DURATION 600 
+#define REVERSE_DURATION 500 
 
 
 AF_DCMotor leftFront(1, MOTOR12_64KHZ);
