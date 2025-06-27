@@ -22,7 +22,7 @@ void loop() {
     Command = Serial.read();
 
     if (Command == 'f') {
-      // Forward
+      
       digitalWrite(in1, HIGH);
       digitalWrite(in4, HIGH);
       digitalWrite(in2, LOW);
@@ -32,7 +32,7 @@ void loop() {
       delay(3000);
     }
     else if (Command == 'b') {
-      // Backward
+      
       digitalWrite(in1, LOW);
       digitalWrite(in4, LOW);
       digitalWrite(in2, HIGH);
@@ -42,7 +42,7 @@ void loop() {
       delay(3000);
     }
     else if (Command == 's') {
-      // Stop
+      
       digitalWrite(in1, LOW);
       digitalWrite(in2, LOW);
       digitalWrite(in3, LOW);
