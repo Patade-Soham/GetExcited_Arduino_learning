@@ -15,7 +15,7 @@ void setup() {
   pinMode(enb,OUTPUT);
   pinMode(in3,OUTPUT);
   pinMode(in4,OUTPUT);
-  // put your setup code here, to run once:
+  
 
 }
 
@@ -24,7 +24,7 @@ void loop() {
   command=Serial.read();
   if (command=='f'){
     digitalWrite(in1,HIGH);
-    digitalWrite(in2,LOW);//forward(clockwise)
+    digitalWrite(in2,LOW);
     digitalWrite(in4,LOW);
     digitalWrite(in3,HIGH);
     analogWrite(ena,200);
@@ -49,7 +49,7 @@ void loop() {
   }
   else if(command=='r'){
     digitalWrite(in1,HIGH);
-    digitalWrite(in2,LOW);//forward(clockwise)
+    digitalWrite(in2,LOW);
     digitalWrite(in4,LOW);
     digitalWrite(in3,LOW);
     analogWrite(ena,200);
@@ -59,7 +59,7 @@ void loop() {
   }
   else if(command=='l'){
     digitalWrite(in1,LOW);
-    digitalWrite(in2,LOW);//forward(clockwise)
+    digitalWrite(in2,LOW);
     digitalWrite(in4,LOW);
     digitalWrite(in3,HIGH);
     analogWrite(ena,200);
@@ -72,6 +72,6 @@ void loop() {
 
 
 
-  // put your main code here, to run repeatedly:
+  
 
 }
