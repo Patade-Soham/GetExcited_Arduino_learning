@@ -6,7 +6,7 @@ int distance;
 
 
 void setup() {
-  // put your setup code here, to run once:
+
   pinMode(trigpin,INPUT);
   pinMode(echopin,INPUT);
   pinMode(red,OUTPUT);
@@ -16,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
   
 
 }
