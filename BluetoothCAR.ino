@@ -1,14 +1,14 @@
 #include <AFMotor.h>
 
-AF_DCMotor motor1(1); // Front Left
-AF_DCMotor motor2(2); // Front Right
-AF_DCMotor motor3(3); // Rear Left
-AF_DCMotor motor4(4); // Rear Right
+AF_DCMotor motor1(1); 
+AF_DCMotor motor2(2); 
+AF_DCMotor motor3(3); 
+AF_DCMotor motor4(4); 
 
-char bt; // Bluetooth data
+char bt; 
 
 void setup() {
-  Serial.begin(9600); // HC-05 default baud rate
+  Serial.begin(9600); 
   stopCar();
 }
 
@@ -36,7 +36,7 @@ void loop() {
   }
 }
 
-// Movement Functions
+
 
 void forward() {
   motor1.setSpeed(200);
