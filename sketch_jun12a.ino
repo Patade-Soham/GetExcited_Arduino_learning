@@ -5,7 +5,7 @@ int grn=10;
 
 
 void setup() {
-  // put your setup code here, to run once:
+ 
   pinMode(11,OUTPUT);
   pinMode(10,OUTPUT);
   pinMode(9,OUTPUT);
@@ -13,7 +13,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  
   analogWrite(red,102);
   delay(500);
   analogWrite(red,0);
